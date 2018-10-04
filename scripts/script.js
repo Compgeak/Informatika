@@ -1,5 +1,5 @@
 function loadMenuOnLoad(currentDropdown, imagePath) {
-    window.onload = function () {
+    addOnContentLoaded(function () {
         let headerTag = document.createElement('header');
         headerTag.innerHTML = headerHtml;
 		
@@ -14,13 +14,13 @@ function loadMenuOnLoad(currentDropdown, imagePath) {
         document.body.insertBefore(headerTag, document.body.childNodes[0]);
 
         if (imagePath != null) {
-			let headerImageDiv = document.createElement("div");
-			headerImageDiv.id = "header-image";
-			let headerImage = document.createElement("img");
-			headerImage.src = imagePath;
-			headerImage.style = "width:100%";
-			headerImageDiv.appendChild(headerImage);
-			document.body.insertBefore(headerImageDiv, headerTag);
+            let headerImageDiv = document.createElement("div");
+            headerImageDiv.id = "header-image";
+            let headerImage = document.createElement("img");
+            headerImage.src = imagePath;
+            headerImage.style = "width:100%";
+            headerImageDiv.appendChild(headerImage);
+            document.body.insertBefore(headerImageDiv, headerTag);
         }
         
         if (!setCurrentMenuItem(currentDropdown)) {
@@ -28,20 +28,29 @@ function loadMenuOnLoad(currentDropdown, imagePath) {
         }
 		
 		document.body.appendChild(footerTag);
-    }
+    });
 }
 
-function startTimerDisplay(element) {
-  setInterval(function()
-  {
-    let d = new Date();
-    months = d.getMonth().toString().length == 1 ? '0'+ (d.getMonth() + 1) : d.getMonth() + 1;
-    days = d.getDate().toString().length == 1 ? '0'+ d.getDate() : d.getDate();
-    hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours();
-    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes();
-    seconds = d.getSeconds().toString().length == 1 ? '0'+d.getSeconds() : d.getSeconds();
-    element.innerHTML = d.getFullYear() + ":" + months + ":" + days + " " + hours + ":" + minutes + ":" + seconds;
-  }, 100);
+function addOnContentLoaded(fn) {
+    document.addEventListener('DOMContentLoaded', fn, false);
+}
+
+async function sleep(ms) {
+    await new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function startTimerDisplay(element) {
+    while (true)
+    {
+        let d = new Date();
+        months = d.getMonth() < 9 ? '0'+ (d.getMonth() + 1) : d.getMonth() + 1;
+        days = d.getDate().toString().length == 1 ? '0' + d.getDate() : d.getDate();
+        hours = d.getHours().toString().length == 1 ? '0' + d.getHours() : d.getHours();
+        minutes = d.getMinutes().toString().length == 1 ? '0' + d.getMinutes() : d.getMinutes();
+        seconds = d.getSeconds().toString().length == 1 ? '0' + d.getSeconds() : d.getSeconds();
+        element.innerHTML = d.getFullYear() + ":" + months + ":" + days + " " + hours + ":" + minutes + ":" + seconds;
+        await sleep(100);
+    }
 }
 
 function setCurrentMenuItem(currentMenuItem) {
@@ -95,7 +104,7 @@ function setCurrentMenuItem(currentMenuItem) {
                                                 // columnElement.classList.add("current");
                                                 // dropdownElement.classList.add("current");
                                                 return true;
-                                            }                                            
+                                            }
                                         }
                                     }
                             }
