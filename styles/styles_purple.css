@@ -1,0 +1,31 @@
+ul#menu .homenav {
+	background-color: #c800c8;
+	padding: 0px;
+	float: left;
+	margin-bottom: 0px;
+	height: 50px;
+}
+ul#menu div.homenav:hover {
+	background-color: #e108e1;
+	border-bottom: 5px solid #c000c0;
+}
+.time{
+	background-color: #c800c8;
+	padding: 0px 10px;
+	float: right;
+	color: #FFF;
+	font-size: 18px;
+	font-family: Segoe UI;
+}
+ul#menu li:hover > a {
+	background-color: rgba(240,0,240,0.4);
+	border-bottom: 5px solid #c000c0;
+}
+ul#menu li:hover a:hover{
+	background-color: #e108e1;
+	border-bottom: 5px solid #c000c0;
+}
+ul#menu .current {
+	border-bottom: 5px solid #d900d9;
+	background-color: rgba(240,0,240,0.4);
+}

@@ -1,0 +1,1 @@
+var footerHtml = `This is an offline website, here you can find placeholder text like this one. GIMB 2018/2019`;

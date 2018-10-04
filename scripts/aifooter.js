@@ -1,0 +1,1 @@
+var footerHtml = `Spletna stran o umetni inteligenci v računalniških igrah. Miha Zupan & Juš Mirtič GIMB 2018/2019`;

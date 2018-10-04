@@ -1,0 +1,134 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html {overflow-y: scroll; }
+body {
+	min-height: 1200px;
+	padding: 0px;
+	margin-top: 0px;
+	font-family: Segoe UI;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 45px;
+	font-size: 50px;	
+}
+p {
+	font-size: 16px;
+}
+iframe {
+	display: flex;
+	margin: 0 auto;
+}
+ul#menu {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-image: url("../auxsites/images/menu.jpg");
+	background-color: #222;
+	line-height: 50px;
+}
+header {
+	position: sticky;
+	display: flex;
+	flex-flow: row nowrap;
+	top: 0;
+	background-image: url("../auxsites/images/menu.jpg");
+	background-color: #222;
+	height: 50px;
+}
+section {
+	background-color: #f5f2f2;
+	margin: 10px 10px 5px 10px;
+	padding: 40px 50px;
+}
+ul#menu, ul.dropdown, ul.dropdown-content {
+	list-style-type: none;
+}
+ul#menu li {
+	min-width: 170px;
+	min-height: 50px;
+	position: relative;
+	float: left;
+}
+ul#menu a {
+	display: flex;
+	flex-flow: column wrap;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+	font-size: 18px;
+}
+ul#menu .dropdown li {
+	background-color: #202020;
+	min-width: 170px;
+	min-height: 50px;
+}
+ul#menu ul.dropdown {
+	display: none;
+	flex-flow: column wrap;
+	position: absolute;
+	top: 55px;
+	left: 0px;
+	z-index: 2;
+}
+ul#menu ul.dropdown:hover {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+}	
+ul#menu ul.dropdown-content {
+	display: none;
+	flex-flow: column wrap;
+	position: absolute;
+	top: 0px;
+	left: 170px;
+	z-index: 2;
+	border-top: 5px solid #202020;
+}
+ul#menu ul.dropdown-content:hover {
+	position: absolute;
+	top: 0px;
+	left: 170px;
+	border-top: 0px;
+}
+ul#menu li:hover .dropdown {
+	display: flex;
+}
+ul#menu .dropdown li:hover .dropdown-content {
+	display: flex;
+}
+footer{
+	display: flex;
+	flex-flow: row wrap;
+	text-decoration: none;
+	justify-content: center;
+	color: #AAA;
+	font-size: 14px;
+	background-color: #fff;
+	margin-bottom: 5px;
+}
+footer a{
+	color:#AAA;
+	text-decoration: none;
+	font-size: 14px;
+}
+div#header-image {
+	background-color: #202020;
+	width: 100%;
+	margin-bottom: -30px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #222; 
+}
+::-webkit-scrollbar-thumb {
+    background: #444; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #eee; 
+}
