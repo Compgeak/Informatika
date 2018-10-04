@@ -1,9 +1,10 @@
 *{
 	margin: 0px;
 	padding: 0px;
-	font-family: Segoe UI;
-}	
+}
+html {overflow-y: scroll; }
 body {
+	min-height: 1200px;
 	padding: 0px;
 	margin-top: 0px;
 	font-family: Segoe UI;
@@ -17,26 +18,25 @@ p {
 	font-size: 16px;
 }
 iframe {
-	display: block;
+	display: flex;
 	margin: 0 auto;
 }
 ul#menu {
-	margin: 0px, auto;
 	position: sticky;
 	top: 0;
 	width: 100%;
-	background-image: url("images/menu.jpg");
+	background-image: url("../images/menu.jpg");
 	background-color: #222;
 	line-height: 50px;
 }
 header {
 	position: sticky;
-	display: block;
+	display: flex;
+	flex-flow: row nowrap;
 	top: 0;
-	background-image: url("images/menu.jpg");
+	background-image: url("../images/menu.jpg");
 	background-color: #222;
-	margin: 0px;
-	padding-bottom: 50px;
+	height: 50px;
 }
 section {
 	background-color: #f5f2f2;
@@ -49,13 +49,12 @@ ul#menu, ul.dropdown, ul.dropdown-content {
 ul#menu li {
 	min-width: 170px;
 	min-height: 50px;
-	text-align: center;
 	position: relative;
 	float: left;
-	margin-bottom: 0px;
 }
 ul#menu a {
-	display: block;
+	display: flex;
+	flex-flow: column wrap;
 	color: white;
 	text-align: center;
 	line-height: 50px;
@@ -67,14 +66,9 @@ ul#menu .dropdown li {
 	min-width: 170px;
 	min-height: 50px;
 }
-ul#menu .dropdown a {
-	margin-top: 0px;
-}
-ul#menu .dropdown-content a {
-	margin-left: 0px;
-}
 ul#menu ul.dropdown {
 	display: none;
+	flex-flow: column wrap;
 	position: absolute;
 	top: 55px;
 	left: 0px;
@@ -87,6 +81,7 @@ ul#menu ul.dropdown:hover {
 }	
 ul#menu ul.dropdown-content {
 	display: none;
+	flex-flow: column wrap;
 	position: absolute;
 	top: 0px;
 	left: 170px;
@@ -100,19 +95,19 @@ ul#menu ul.dropdown-content:hover {
 	border-top: 0px;
 }
 ul#menu li:hover .dropdown {
-	display: block;
+	display: flex;
 }
 ul#menu .dropdown li:hover .dropdown-content {
-	display: block;
+	display: flex;
 }
 footer{
-	display: block;	
+	display: flex;
+	flex-flow: row wrap;
 	text-decoration: none;
-	text-align: center;
+	justify-content: center;
 	color: #AAA;
 	font-size: 14px;
 	background-color: #fff;
-	padding-top: 0px;
 	margin-bottom: 5px;
 }
 footer a{
@@ -123,5 +118,17 @@ footer a{
 div#header-image {
 	background-color: #202020;
 	width: 100%;
-	margin-bottom: -10px;
+	margin-bottom: -30px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #222; 
+}
+::-webkit-scrollbar-thumb {
+    background: #444; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #eee; 
 }

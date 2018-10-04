@@ -121,7 +121,7 @@ div#header-image {
 	margin-bottom: -30px;
 }
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 16px;
 }
 ::-webkit-scrollbar-track {
     background: #222; 

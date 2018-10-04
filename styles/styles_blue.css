@@ -1,0 +1,31 @@
+ul#menu .homenav {
+	background-color: #0000c8;
+	padding: 0px;
+	float: left;
+	margin-bottom: 0px;
+	height: 50px;
+}
+ul#menu div.homenav:hover {
+	background-color: #0308de;
+	border-bottom: 5px solid #0000c0;
+}
+.time{
+	background-color: #0000c8;
+	padding: 0px 10px;
+	float: right;
+	color: #FFF;
+	font-size: 18px;
+	font-family: Segoe UI;
+}
+ul#menu li:hover > a {
+	background-color: rgba(0,0,240,0.4);
+	border-bottom: 5px solid #0000c0;
+}
+ul#menu li:hover a:hover{
+	background-color: #0308de;
+	border-bottom: 5px solid #0000c0;
+}
+ul#menu .current {
+	border-bottom: 5px solid #0000d9;
+	background-color: rgba(0,0,240,0.4);
+}
