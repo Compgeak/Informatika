@@ -29,3 +29,7 @@ ul#menu .current {
 	border-bottom: 5px solid #0000d9;
 	background-color: rgba(0,0,240,0.4);
 }
+
+#markdownHtml h1 {
+	margin-bottom: 10px;
+}
