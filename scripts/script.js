@@ -2,14 +2,8 @@ function loadMenuOnLoad(currentDropdown, imagePath) {
     addOnContentLoaded(function () {
         let headerTag = document.createElement('header');
         headerTag.innerHTML = headerHtml;
-		
-		var footers = document.getElementsByTagName('footer');
-			if (footers.length == 0) {
-				let footerTag = document.createElement('footer');
-				footerTag.innerHTML = footerHtml;
-			}
 
-		let timeElement = document.createElement("div");
+        let timeElement = document.createElement("div");
         timeElement.classList.add("time");
         startTimerDisplay(timeElement);
         headerTag.getElementsByTagName("ul")[0].appendChild(timeElement);
@@ -29,8 +23,12 @@ function loadMenuOnLoad(currentDropdown, imagePath) {
         if (!setCurrentMenuItem(currentDropdown)) {
             console.error("ELEMENT " + currentDropdown + " NOT FOUND!");
         }
-		
-		document.body.appendChild(footerTag);
+
+        if (typeof footerHtml !== 'undefined') {
+            let footerTag = document.createElement('footer');
+            footerTag.innerHTML = footerHtml;
+            document.body.appendChild(footerTag);
+        }
     });
 }
 
