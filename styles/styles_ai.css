@@ -32,3 +32,10 @@ ul#menu .current {
 	border-bottom: 5px solid #d900d9;
 	background-color: rgba(240,0,240,0.4);
 }
+
+.center {
+    margin: 0 auto;
+	width: 800px;
+	display: block;
+	text-align: center;
+}
