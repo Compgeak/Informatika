@@ -1,6 +1,6 @@
 var headerHtml = `
 <ul id="menu">
-	<div class="homenav"><a href="auxsites/foto/fotomain.html"><img src="auxsites/foto/images/home.png" alt="Digital Photogrpahy" height="50px" ></a></div>
+	<div class="homenav"><a href="auxsites/foto/index.html"><img src="auxsites/foto/images/home.png" alt="Digital Photogrpahy" height="50px" ></a></div>
 	<li><a href="auxsites/foto/aspects.html">Photography</a>
 		<ul class="dropdown">
 			<li><a href="auxsites/foto/aspects/exposure.html">Exposure</a></li>
@@ -31,7 +31,7 @@ var headerHtml = `
 				</ul>
 			</li>
 			<li><a href="auxsites/foto/gear/lenses.html">Lenses</a></li>
-			<li><a href="auxsites/foto/gear/mounts.html">Tripods</a></li>
+			<li><a href="auxsites/foto/gear/stands.html">Stands</a></li>
 			<li><a href="auxsites/foto/gear/remote.html">Remote Triggers</a></li>
 			<li><a href="auxsites/foto/gear/filters.html">Filters</a></li>
 		</ul>
