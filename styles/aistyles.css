@@ -98,27 +98,6 @@ ul#menu li:hover .dropdown {
 ul#menu .dropdown li:hover .dropdown-content {
 	display: flex;
 }
-ul#sitelink {
-	display: flex;
-	flex-flow: row wrap;
-	text-decoration: none;
-	justify-content: center;
-}
-ul#sitelink li{
-	display: flex;
-	width: 45%;
-	height: 200px;
-	margin: 10px;
-}
-ul#sitelink a{
-	display: flex;
-	text-decoration: none;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	width: 100%;
-	font-size: 40px;
-}
 footer{
 	display: flex;
 	flex-flow: row wrap;
