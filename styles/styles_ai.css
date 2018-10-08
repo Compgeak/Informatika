@@ -9,6 +9,9 @@ ul#menu div.homenav:hover {
 	background-color: #e108e1;
 	border-bottom: 5px solid #c000c0;
 }
+ul#menu .current:hover {
+	border-bottom: 0px solid #d90000;
+}
 .time{
 	background-color: #c800c8;
 	padding: 0px 10px;

@@ -7,6 +7,9 @@ ul#menu div.homenav:hover {
 	background-color: #de0803;
 	border-bottom: 5px solid #c00000;
 }
+ul#menu .current:hover {
+	border-bottom: 0px solid #d90000;
+}
 .time{
 	background-color: #c80000;
 	padding: 0px 10px;
@@ -21,7 +24,6 @@ ul#menu li:hover > a {
 }
 ul#menu li:hover a:hover{
 	background-color: #de0803;
-	border-bottom: 5px solid #c00000;
 }
 ul#menu .current {
 	border-bottom: 5px solid #d90000;

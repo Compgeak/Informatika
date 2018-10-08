@@ -5,6 +5,9 @@ ul#menu .homenav {
 	margin-bottom: 0px;
 	height: 50px;
 }
+ul#menu .current:hover {
+	border-bottom: 0px solid #d90000;
+}
 ul#menu div.homenav:hover {
 	background-color: #0308de;
 	border-bottom: 5px solid #0000c0;
