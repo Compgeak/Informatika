@@ -28,7 +28,34 @@
             </style>
 
             <div id="markdownFlex">
-                <textarea rows="32" type="text" id="markdownInput" oninput="onMarkdownChanged()"></textarea>
+                <textarea rows="32" type="text" id="markdownInput" oninput="onMarkdownChanged()">
+<style>
+td, th {
+    border: 1px solid rgb(200, 200, 200);
+	padding: 8px;
+	font-size: 16px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-image: url("../auxsites/images/menu.jpg");
+    color: white;
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 200, 0.2);
+}
+</style>
+
+| Ime  | Priimek | Razred | Spol  |
+|------|---------|--------|-------|
+| Juš  | Mirtič  | 4. A   | Moški |
+| Miha | Zupan   | 4. A   | Moški |
+| Jaka | Šivavec | 4. MM  | Moški |
+                </textarea>
                 <div id="markdownHtml"></div>
             </div>
 
