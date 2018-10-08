@@ -10,7 +10,7 @@
         <script src="scripts/script.js"></script>
         <script src="scripts/mdmenu.js"></script>
         <script src="scripts/mdfooter.js"></script>
-        <script>loadMenuOnLoad("Try it live!")</script>
+        <script>loadMenuOnLoad("Poskusi v živo!")</script>
     </head>
 
     <body>
@@ -28,24 +28,13 @@
             </style>
 
             <div id="markdownFlex">
-<textarea rows="32" type="text" id="markdownInput" oninput="onMarkdownChanged()">
-# Markdown Preview
-
-Write markdown on the **left**, see it _rendered_ on the **right**.
-
-<br>If you want, you can even `embed html right into markdown.`<br><br>
-
-[![Cat](https://placekitten.com/600/300)](http://www.google.com/search?q=cat)
-
-Be sure to checkout the [project on GitHub](https://github.com/MihaZupan/MarkdownValidator)!
-If you spot something wrong, open an [isue].
-
-[Issue]: https://github.com/MihaZupan/MarkdownValidator/issues
-</textarea>
+                <textarea rows="32" type="text" id="markdownInput" oninput="onMarkdownChanged()"></textarea>
                 <div id="markdownHtml"></div>
             </div>
 
             <ul id="markdownWarnings"></ul>
+            <br>
+            <pre id="markdownRawHtml"></pre>
 
             <script>
                 var socket = new WebSocket("wss://markdown-validator.ml:6300");
@@ -66,6 +55,7 @@ If you spot something wrong, open an [isue].
                     if (lastVersion > message.Version) return;
                     lastVersion = message.Version;
                     document.getElementById("markdownHtml").innerHTML = message.Html;
+                    document.getElementById("markdownRawHtml").innerText = message.Html;
                     document.getElementById("markdownWarnings").innerHTML = "";
                     let warningsList = document.getElementById("markdownWarnings");
                     for (let i = 0; i < message.Warnings.length; i++) {
@@ -90,6 +80,7 @@ If you spot something wrong, open an [isue].
                 };
             </script>
 
+            <br>
             <p style="text-align: center">Powered by <a href="https://github.com/MihaZupan/MarkdownValidator">Markdown Validator</a></p>
         </section>
     </body>

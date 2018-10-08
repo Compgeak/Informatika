@@ -10,7 +10,7 @@ ul#menu div.homenav:hover {
 	border-bottom: 5px solid #0000c0;
 }
 .time{
-	background-color: #0000c8;
+	background-color: rgba(0, 0, 200, 0.4);
 	padding: 0px 10px;
 	float: right;
 	color: #FFF;
@@ -18,18 +18,43 @@ ul#menu div.homenav:hover {
 	font-family: Segoe UI;
 }
 ul#menu li:hover > a {
-	background-color: rgba(0,0,240,0.4);
+	background-color: rgba(0, 0, 240, 0.4);
 	border-bottom: 5px solid #0000c0;
 }
 ul#menu li:hover a:hover{
-	background-color: #0308de;
+	background-color: rgba(3, 8, 222, 0.3);
 	border-bottom: 5px solid #0000c0;
 }
 ul#menu .current {
-	border-bottom: 5px solid #0000d9;
-	background-color: rgba(0,0,240,0.4);
+	border-bottom: 5px solid rgb(0, 0, 217, 0.6);
+	background-color: rgba(0, 0, 240, 0.4);
 }
 
 #markdownHtml h1 {
 	margin-bottom: 10px;
+}
+
+#markdownSample {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#markdownSample td, #markdownSample th {
+    border: 1px solid rgb(200, 200, 200);
+	padding: 8px;
+	font-size: 16px;
+}
+
+#markdownSample tr:nth-child(even){background-color: #f2f2f2;}
+
+#markdownSample tr:hover {background-color: #ddd;}
+
+#markdownSample th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+	background-image: url("../auxsites/images/menu.jpg");
+	color: white;
+	box-shadow: inset 0 0 0 100px rgba(0, 0, 200, 0.2);
 }

@@ -1,1 +1,1 @@
-var footerHtml = `The ultimate markdown page to be (Soon...) 2018/2019`;
+var footerHtml = `Markdown Markup Language 2018/2019`;

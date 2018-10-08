@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Markdown</title>
+        <base href="../../">
+        <link rel="icon" href="auxsites/md/images/home.png">
+        <link rel="stylesheet" href="styles/styles_md.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="scripts/script.js"></script>
+        <script src="scripts/mdmenu.js"></script>
+        <script src="scripts/mdfooter.js"></script>
+        <script>loadMenuOnLoad("Primerjaj")</script>
+    </head>
+    <body>
+        <section>
+            <table id="markdownSample">
+                <tr>
+                    <th>Markdown</th>
+                    <th>HTML</th>
+                    <th>Prikaz</th>
+                </tr>
+                <tr>
+                    <td># Naslov 1<br><br>## Naslov 2</td>
+                    <td>
+<pre>&#x3C;h1 id=&#x22;naslov-1&#x22;&#x3E;
+  Naslov 1
+&#x3C;/h1&#x3E;
+&#x3C;h2 id=&#x22;naslov-2&#x22;&#x3E;
+  Naslov 2
+&#x3C;/h2&#x3E;</pre>
+                    </td>
+                    <td>
+<h1 id="naslov-1">
+  Naslov 1
+</h1>
+<h2 id="naslov-2">
+  Naslov 2
+</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>**Krepka pisava**<br><br>*Poševna pisava* ali _poševna pisava_<br><br>***Krepka poševna pisava***</td>
+                    <td>
+<pre>&#x3C;p&#x3E;
+  &#x3C;strong&#x3E;Krepka pisava&#x3C;/strong&#x3E;
+&#x3C;/p&#x3E;
+&#x3C;p&#x3E;
+  &#x3C;em&#x3E;Po&#x161;evna pisava&#x3C;/em&#x3E; ali &#x3C;em&#x3E;po&#x161;evna pisava&#x3C;/em&#x3E;
+&#x3C;/p&#x3E;
+&#x3C;p&#x3E;
+  &#x3C;em&#x3E;&#x3C;strong&#x3E;Krepka po&#x161;evna pisava&#x3C;/strong&#x3E;&#x3C;/em&#x3E;
+&#x3C;/p&#x3E;</pre>
+                    </td>
+                    <td>
+<p>
+  <strong>Krepka pisava</strong>
+</p>
+<p>
+  <em>Poševna pisava</em> ali <em>poševna pisava</em>
+</p>
+<p>
+  <em><strong>Krepka poševna pisava</strong></em>
+</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>[Zunanja povezava](https://google.com/search?q=markdown)</td>
+                    <td>
+<pre>&#x3C;p&#x3E;
+  &#x3C;a href=&#x22;https://google.com/search?q=markdown&#x22;&#x3E;Zunanja povezava&#x3C;/a&#x3E;
+&#x3C;/p&#x3E;</pre>
+                    </td>
+                    <td>
+	
+<p>
+  <a href="https://google.com/search?q=markdown">Zunanja povezava</a>
+</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>![Slika](https://placekitten.com/500/250)</td>
+                    <td>
+<pre>&#x3C;p&#x3E;
+  &#x3C;img src=&#x22;https://placekitten.com/500/250&#x22; alt=&#x22;Slika&#x22; /&#x3E;
+&#x3C;/p&#x3E;</pre>
+                    </td>
+                    <td>
+<p>
+  <img src="https://placekitten.com/500/250" alt="Slika" />
+</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+<pre>
+| Ime  | Priimek | Razred |
+|------|---------|--------|
+| Juš  | Mirtič  | 4. A   |
+| Miha | Zupan   | 4. A   |
+</pre>
+                    </td>
+                    <td>
+<pre>&#x3C;table&#x3E;
+  &#x3C;thead&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;th&#x3E;
+        Ime
+      &#x3C;/th&#x3E;
+      &#x3C;th&#x3E;
+        Priimek
+      &#x3C;/th&#x3E;
+      &#x3C;th&#x3E;
+        Razred
+      &#x3C;/th&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/thead&#x3E;
+  &#x3C;tbody&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        Ju&#x161;
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        Mirti&#x10D;
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        4. A
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+    &#x3C;tr&#x3E;
+      &#x3C;td&#x3E;
+        Miha
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        Zupan
+      &#x3C;/td&#x3E;
+      &#x3C;td&#x3E;
+        4. A
+      &#x3C;/td&#x3E;
+    &#x3C;/tr&#x3E;
+  &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;</pre>
+                    </td>
+                    <td>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Ime
+      </th>
+      <th>
+        Priimek
+      </th>
+      <th>
+        Razred
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Juš
+      </td>
+      <td>
+        Mirtič
+      </td>
+      <td>
+        4. A
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Miha
+      </td>
+      <td>
+        Zupan
+      </td>
+      <td>
+        4. A
+      </td>
+    </tr>
+  </tbody>
+</table>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>
