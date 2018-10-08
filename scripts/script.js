@@ -3,8 +3,11 @@ function loadMenuOnLoad(currentDropdown, imagePath) {
         let headerTag = document.createElement('header');
         headerTag.innerHTML = headerHtml;
 		
-		let footerTag = document.createElement('footer');
-        footerTag.innerHTML = footerHtml;
+		var footers = document.getElementsByTagName('footer');
+			if (footers.length == 0) {
+				let footerTag = document.createElement('footer');
+				footerTag.innerHTML = footerHtml;
+			}
 
 		let timeElement = document.createElement("div");
         timeElement.classList.add("time");
