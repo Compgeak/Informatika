@@ -25,6 +25,20 @@
                 #markdownFlex {
                     display: flex;
                 }
+
+                .button {
+                    background-color: rgba(0, 0, 200, 0.7);
+                    border: none;
+                    color: white;
+                    padding: 12px 20px;
+                    text-align: center;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+
+                .button:hover {
+                    background-color: rgba(3, 8, 222, 0.95);
+                }
             </style>
 
             <div id="markdownFlex">
@@ -55,15 +69,25 @@ th {
 | Juš  | Mirtič  | 4. A   | Moški |
 | Miha | Zupan   | 4. A   | Moški |
 | Jaka | Šivavec | 4. MM  | Moški |
-                </textarea>
+</textarea>
                 <div id="markdownHtml"></div>
             </div>
-
+            <br>
+            <button id="htmlSettingButton" onclick="onHtmlSettingChanges()" class="button">Skrij HTML</button>
+            <br>
             <ul id="markdownWarnings"></ul>
             <br>
             <pre id="markdownRawHtml"></pre>
 
             <script>
+                var htmlEnabled = true;
+                function onHtmlSettingChanges() {
+                    htmlEnabled = !htmlEnabled;
+                    document.getElementById('htmlSettingButton').innerText = htmlEnabled ? 'Skrij HTML' : 'Prikaži html';
+                    if (!htmlEnabled)
+                        document.getElementById("markdownRawHtml").innerText = '';
+                }
+
                 var socket = new WebSocket("wss://markdown-validator.ml:6300");
                 var version = 0;
 
@@ -82,7 +106,7 @@ th {
                     if (lastVersion > message.Version) return;
                     lastVersion = message.Version;
                     document.getElementById("markdownHtml").innerHTML = message.Html;
-                    document.getElementById("markdownRawHtml").innerText = message.Html;
+                    document.getElementById("markdownRawHtml").innerText = htmlEnabled ? message.Html : '';
                     document.getElementById("markdownWarnings").innerHTML = "";
                     let warningsList = document.getElementById("markdownWarnings");
                     for (let i = 0; i < message.Warnings.length; i++) {
