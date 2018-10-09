@@ -15,7 +15,866 @@
 <body>
     <section>
     <h1>Exposure and Brightness</h1>
-
+<p>Exposure determines how bright the image is. We can control exposure with aperture, shutter speed, sensor sensitivity and brightness of the object in the real world.</p>
+<p>The shorter the exposure time (shutter speed) the less light will be collected, resulting in a darker image. A higher aperture, more precisely a higher T-stop will allow less light in a given amount of time, again resulting in a darker image. A higher sensitivity on the sensor will result in a pixel outputting a higher value for the same amount of light collected on the sensor but will increase the unevenness of the photo, introducing more noise and producing grainier results.</p>
+<p>We can use an exposure table to determine how much light our camera will collect. A higher Exposure value will mean a darker photo (higher because it means the object has to be more brightly lit to achieve optimal exposure).</p>
+	<table class="table" style="text-align: right;" id="exptable">
+<caption>Exposure times in seconds or minutes needed for various exposure values at different <var>t</var>-stops.
+</caption>
+<tbody><tr>
+<th rowspan="2" style="padding: 0.1em 0.5em;">EV
+</th>
+<th colspan="13"><var>t</var>-stop
+</th></tr>
+<tr>
+<th>1.0</th>
+<th>1.4</th>
+<th>2.0</th>
+<th>2.8</th>
+<th>4.0</th>
+<th>5.6</th>
+<th>8.0</th>
+<th>11</th>
+<th>16</th>
+<th>22</th>
+<th>32</th>
+<th>45</th>
+<th>64
+</th></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">−6
+</th>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td>
+<td style="padding: 0.1em 0.5em;">32 m
+</td>
+<td style="padding: 0.1em 0.5em;">64 m
+</td>
+<td style="padding: 0.1em 0.5em;">128 m
+</td>
+<td style="padding: 0.1em 0.5em;">256 m
+</td>
+<td style="padding: 0.1em 0.5em;">512 m
+</td>
+<td style="padding: 0.1em 0.5em;">1024 m
+</td>
+<td style="padding: 0.1em 0.5em;">2048 m
+</td>
+<td style="padding: 0.1em 0.5em;">4096 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">−5
+</th>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td>
+<td style="padding: 0.1em 0.5em;">32 m
+</td>
+<td style="padding: 0.1em 0.5em;">64 m
+</td>
+<td style="padding: 0.1em 0.5em;">128 m
+</td>
+<td style="padding: 0.1em 0.5em;">256 m
+</td>
+<td style="padding: 0.1em 0.5em;">512 m
+</td>
+<td style="padding: 0.1em 0.5em;">1024 m
+</td>
+<td style="padding: 0.1em 0.5em;">2048 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">−4
+</th>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td>
+<td style="padding: 0.1em 0.5em;">32 m
+</td>
+<td style="padding: 0.1em 0.5em;">64 m
+</td>
+<td style="padding: 0.1em 0.5em;">128 m
+</td>
+<td style="padding: 0.1em 0.5em;">256 m
+</td>
+<td style="padding: 0.1em 0.5em;">512 m
+</td>
+<td style="padding: 0.1em 0.5em;">1024 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">−3
+</th>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td>
+<td style="padding: 0.1em 0.5em;">32 m
+</td>
+<td style="padding: 0.1em 0.5em;">64 m
+</td>
+<td style="padding: 0.1em 0.5em;">128 m
+</td>
+<td style="padding: 0.1em 0.5em;">256 m
+</td>
+<td style="padding: 0.1em 0.5em;">512 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">−2
+</th>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td>
+<td style="padding: 0.1em 0.5em;">32 m
+</td>
+<td style="padding: 0.1em 0.5em;">64 m
+</td>
+<td style="padding: 0.1em 0.5em;">128 m
+</td>
+<td style="padding: 0.1em 0.5em;">256 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">−1
+</th>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td>
+<td style="padding: 0.1em 0.5em;">32 m
+</td>
+<td style="padding: 0.1em 0.5em;">64 m
+</td>
+<td style="padding: 0.1em 0.5em;">128 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">0
+</th>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td>
+<td style="padding: 0.1em 0.5em;">32 m
+</td>
+<td style="padding: 0.1em 0.5em;">64 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">1
+</th>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td>
+<td style="padding: 0.1em 0.5em;">32 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">2
+</th>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td>
+<td style="padding: 0.1em 0.5em;">16 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">3
+</th>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td>
+<td style="padding: 0.1em 0.5em;">8 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">4
+</th>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td>
+<td style="padding: 0.1em 0.5em;">4 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">5
+</th>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td>
+<td style="padding: 0.1em 0.5em;">2 m
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">6
+</th>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td>
+<td style="padding: 0.1em 0.5em;">60
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">7
+</th>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td>
+<td style="padding: 0.1em 0.5em;">30
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">8
+</th>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td>
+<td style="padding: 0.1em 0.5em;">15
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">9
+</th>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td>
+<td style="padding: 0.1em 0.5em;">8
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">10
+</th>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td>
+<td style="padding: 0.1em 0.5em;">4
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">11
+</th>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td>
+<td style="padding: 0.1em 0.5em;">2
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">12
+</th>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td>
+<td style="padding: 0.1em 0.5em;">1
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">13
+</th>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td>
+<td style="padding: 0.1em 0.5em;">1/2
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">14
+</th>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td>
+<td style="padding: 0.1em 0.5em;">1/4
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">15
+</th>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td>
+<td style="padding: 0.1em 0.5em;">1/8
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">16
+</th>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td>
+<td style="padding: 0.1em 0.5em;">1/15
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">17
+</th>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td>
+<td style="padding: 0.1em 0.5em;">1/30
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">18
+</th>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td>
+<td style="padding: 0.1em 0.5em;">1/60
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">19
+</th>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td>
+<td style="padding: 0.1em 0.5em;">1/125
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">20
+</th>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td>
+<td style="padding: 0.1em 0.5em;">1/250
+</td></tr>
+<tr>
+<th style="text-align: right; padding: 0.1em 0.5em;">21
+</th>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">
+</td>
+<td style="padding: 0.1em 0.5em;">1/8000
+</td>
+<td style="padding: 0.1em 0.5em;">1/4000
+</td>
+<td style="padding: 0.1em 0.5em;">1/2000
+</td>
+<td style="padding: 0.1em 0.5em;">1/1000
+</td>
+<td style="padding: 0.1em 0.5em;">1/500
+</td></tr>
+<tr>
+<th rowspan="2" style="padding: 0.1em 0.5em;">EV
+</th>
+<th>1.0</th>
+<th>1.4</th>
+<th>2.0</th>
+<th>2.8</th>
+<th>4.0</th>
+<th>5.6</th>
+<th>8.0</th>
+<th>11</th>
+<th>16</th>
+<th>22</th>
+<th>32</th>
+<th>45</th>
+<th>64
+</th></tr>
+<tr>
+<th colspan="13"><var>t</var>-stop
+</th></tr>
+</tbody></table>
+	<img src="" ></img>
 	</section>
 </body>
 </html>

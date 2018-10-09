@@ -29,3 +29,6 @@ ul#menu .current {
 	border-bottom: 5px solid #d90000;
 	background-color: rgba(240,0,0,0.4);
 }
+.table {
+	width: 100%;
+}
