@@ -151,3 +151,9 @@ div#header-image {
 ::-webkit-scrollbar-thumb:hover {
     background: #eee; 
 }
+
+.centerVideo {
+    margin: 0 auto;
+	display: block;
+	text-align: center;
+}

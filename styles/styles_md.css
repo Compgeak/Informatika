@@ -61,3 +61,37 @@ ul#menu .current {
 	color: white;
 	box-shadow: inset 0 0 0 100px rgba(0, 0, 200, 0.2);
 }
+
+#markdownInput {
+	resize: none;
+	width: 800px;
+	margin: 10px;
+}
+
+#markdownFlex {
+	display: flex;
+}
+
+.button {
+	background-color: rgba(0, 0, 200, 0.7);
+	border: none;
+	color: white;
+	padding: 12px 20px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: rgba(3, 8, 222, 0.95);
+}
+
+#markdownInput {
+	font-size: 16px;
+}
+#markdownWarnings {
+	font-size: 16px;
+}
+#markdownRawHtml {
+	font-size: 16px;
+}

@@ -14,10 +14,35 @@
 <body>
     <section>
     <h1>About</h1>
+	<p>This page was created by Juš Mirtič in collaboration with Miha Zupan in 2018 for the purposes of it lessons at Gimnazija Bežigrad.</p>
+<p>&nbsp;</p>
+<div id="mnenjePageDiv">
+				<form onsubmit="alert('Mnenje uspešno oddano!'); HomeClicked(); return false;">
+					<fieldset style="width: 350px;">
+						<label for="fname">Ime:</label><input type="text" id="fname" name="firstname" placeholder="Ime">
+						<br>
+						<label for="lname">Priimek:</label><input type="text" id="lname" name="lastname" placeholder="Priimek">
+						<br>
+						<label for="email">E-naslov:</label><input type="text" id="email" name="emailaddr" placeholder="E-naslov" required>
+						<br>
+						<p>Vam je stran všeč?</p>
+						<form>
+						<input type="radio" name="good" value="0"> Ne<br>
+						<input type="radio" name="good" value="1" checked> Da<br>
+						</form>
+						<!-- Ne je izbran samodejno, ker stran ni kaj preveč dobra--> 
+						<label for="msg">Mnenje:</label><textarea type="message-box" rows="10" cols="70" placeholder="Mnenje lahko napišete tu."></textarea>
+						<br>
+						<input type="submit" value="Pošlji">
+					</fieldset>
+				</form>
+			</div>
+</div>
+<p>&nbsp;</p>
 <p> Oglej si še druge dele spletišča! </p>
+<p>&nbsp;</p>
 <div><ul id="sitelink"><li><a href="auxsites/md/index.html" style="background-color:#0000CC;">Markdown</a></li><li><a href="index.html"style="background-color:#AA00CC;">Umetna Inteligenca</a></li></ul></div>
 	</section>
-
 	<footer>Hello, you just found an&nbsp;<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">easter egg.</a>&nbsp;Congratulations! GIMB 2018/2019</footer>
 </body>
 </html>
